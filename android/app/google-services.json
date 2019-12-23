@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "955363918669",
+    "firebase_url": "https://videx-app.firebaseio.com",
+    "project_id": "videx-app",
+    "storage_bucket": "videx-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:955363918669:android:3216247ae1c41a20646d04",
+        "android_client_info": {
+          "package_name": "com.videx"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "955363918669-b2m62p7uf9hs94svibm62kcqee3rso1q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5_GdRj13Lh3b_tvxqs9I129v7O1Fj87s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "955363918669-b2m62p7uf9hs94svibm62kcqee3rso1q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
