@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../helpers/lang.dart';
-import '../views/video_view.dart';
+import '../views/download_view.dart';
+//import '../views/video_view.dart';
 import '../widgets/custom_poster.dart';
 import '../helpers/ads.dart';
 import '../helpers/guards.dart';
@@ -48,11 +49,13 @@ class _MovieDetailState extends State<MovieDetail> {
           ],
         ),
         floatingActionButton: FloatingActionButton(
-          child: Icon(Icons.play_arrow),
+          child: Icon(Icons.cloud_download),
+//          child: Icon(Icons.play_arrow),
           onPressed: () {
             _serversDialog(context, movie);
           },
-        ));
+        ),
+    );
   }
 
   Widget _moviePoster(Movie movie) {
@@ -85,7 +88,8 @@ class _MovieDetailState extends State<MovieDetail> {
                           ),
                           onPressed: () {
                             Ads.interstitialShow();
-                            Navigator.of(context).push(MaterialPageRoute(builder: (context) => VideoView(movie.previewPath)));
+                            downloadFile(movie.previewPath);
+//                            Navigator.of(context).push(MaterialPageRoute(builder: (context) => VideoView(movie.previewPath)));
                           })
                       : Container()
                 ]),
@@ -179,9 +183,8 @@ class _MovieDetailState extends State<MovieDetail> {
                         trailing: Icon(Icons.play_circle_outline),
                         onTap: () {
                           Ads.interstitialShow();
-                          moviesProvider.view(movie.id.toString());
-                          Navigator.of(context).pop();
-                          Navigator.of(context).push(MaterialPageRoute(builder: (context) => VideoView(videos[i].link)));
+                          downloadFile(videos[i].link);
+//                          Navigator.of(context).push(MaterialPageRoute(builder: (context) => VideoView(videos[i].link)));
                         },
                       ),
                       Divider()
